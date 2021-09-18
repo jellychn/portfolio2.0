@@ -1,38 +1,87 @@
-import Logo from '../assets/work/canit.png';
+import { useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/configureStore';
 
-import vue from '../assets/skills/skill-set/vue.svg';
-import vuetify from '../assets/skills/skill-set/vuetify.svg';
 
 const WorkProject = () => {
-    return (
-        <div className="work-project">
-            <div className="main">
-            <button className="view-button">
-                    <h3>VIEW PROJECT</h3>
+    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
+    const project = useSelector((state: RootState) => state.app.item);
+    const prompt = useSelector((state: RootState) => state.app.prompt);
+
+
+    const projectLogoRef = useRef<HTMLDivElement>(null);
+    const projectBodyRef = useRef<HTMLDivElement>(null);
+    const projectInfoRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (projectLogoRef.current && projectBodyRef.current && projectInfoRef.current) {        
+            if (prompt) {
+                projectLogoRef.current.classList.add('animate-in-left-to-right');
+                projectLogoRef.current.classList.remove('animate-out-right-to-left');
+    
+                projectBodyRef.current.classList.add('animate-fade-in');
+                projectBodyRef.current.classList.remove('animate-fade-out');
+    
+                projectInfoRef.current.classList.add('animate-in-right-to-left');
+                projectInfoRef.current.classList.remove('animate-out-left-to-right');
+            } else {
+                projectLogoRef.current.classList.remove('animate-in-left-to-right');
+                projectLogoRef.current.classList.add('animate-out-right-to-left');
+    
+                projectBodyRef.current.classList.remove('animate-fade-in');
+                projectBodyRef.current.classList.add('animate-fade-out');
+    
+                projectInfoRef.current.classList.add('animate-out-left-to-right');
+                projectInfoRef.current.classList.remove('animate-in-right-to-left');
+            }
+        }
+    
+    }, [projectLogoRef, projectBodyRef, projectInfoRef]);
+
+    let viewBtn = () => {
+        if (project.url) {
+            return (
+                <button className="view-button">
+                    <a href={project.url} target="_blank" style={{color: project.bgColor}}>
+                        <h3>VIEW PROJECT</h3>
+                    </a>
                 </button>
+            )
+        }
+    }
+
+    return (
+        <div  ref={projectBodyRef} className="work-project" style={{boxShadow: '0 0 100px 30px ' + colorConfig.shadow}}>
+            <div className="main" style={{backgroundColor: project.bgColor}}>
+                {viewBtn()}
                 <div className="content">
-                    <div className="content-LHS">
+                    <div ref={projectLogoRef} className="content-LHS">
                         <div className="img-container">
-                            <img src={Logo}/>
+                            <img src={project.icon}/>
                         </div>
                     </div>
-                    <div className="content-RHS">
+                    <div ref={projectInfoRef} className="content-RHS">
                         <div className="content-fill"/>
                         <div className="info">
-                            <h1>NAME。</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non. Similique maxime quisquam nulla harum officiis ullam eveniet quia accusamus voluptatum, quos quo fuga, suscipit doloribus eius! Quasi, exercitationem eum?</p>
+                            <h1>{project.title}</h1>
+                            <h5>{project.subTitle}</h5>
+                            <br/>
+                            <p>{project.description}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="footer">
                 <div className="content-fill"/>
-                <div className="img-container">
-                    <img src={vue}/>
-                </div>
-                <div className="img-container">
-                    <img src={vuetify}/>
-                </div>
+                {
+                    project.techStack.map((img:string, index:number) => {
+                        return (
+                            <div className="img-container" key={index}>
+                                <img src={img}/>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )

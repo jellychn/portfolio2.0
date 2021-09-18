@@ -1,10 +1,29 @@
+import { useRef } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/configureStore';
+
 import Avatar from '../assets/avatar.svg';
 import Contact from '../assets/contact.svg';
 import Phone from '../assets/phone.svg';
 
 const ContactCard = () => {
+    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
+    const prompt = useSelector((state: RootState) => state.app.prompt);
+
+    const contactCardRef = useRef<HTMLDivElement>(null);
+
+    if (contactCardRef.current) {
+        if (prompt) {
+            contactCardRef.current.classList.add('animate-fade-in');
+            contactCardRef.current.classList.remove('animate-fade-out');
+        } else {
+            contactCardRef.current.classList.remove('animate-fade-in');
+            contactCardRef.current.classList.add('animate-fade-out');
+        }
+    }
+
     return (
-        <div className="contact-card">
+        <div ref={contactCardRef} className="contact-card" style={{boxShadow: '0 0 100px 30px ' + colorConfig.shadow}}>
             <div className="contact-card-LHS">
                 <div className="avatar">
                     <img src={Avatar}/>
@@ -23,10 +42,14 @@ const ContactCard = () => {
                 <div className="contact-footer">
                     <div className="content-fill"/>
                     <div className="img-container">
-                        <img src={Contact}/>
+                        <a href="mailto: jchen123.862@gmail.com">
+                            <img src={Contact}/>
+                        </a>
                     </div>
                     <div className="img-container">
-                        <img src={Phone}/>
+                        <a href="tel:+640210620879">
+                            <img src={Phone}/>
+                        </a>
                     </div>
                 </div>
             </div>

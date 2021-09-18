@@ -1,3 +1,9 @@
+import {useRef, forwardRef} from 'react';
+
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/configureStore';
+
+
 import Backend from '../assets/skills/backend.svg';
 import Design from '../assets/skills/design.svg';
 import Languages from '../assets/skills/languages.svg';
@@ -29,9 +35,14 @@ import typescript from '../assets/skills/skill-set/typescript.svg';
 import vue from '../assets/skills/skill-set/vue.svg';
 import vuetify from '../assets/skills/skill-set/vuetify.svg';
 
+interface SkillsProps {
+}
 
+const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
+    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
+    const sectionStart = useSelector((state: RootState) => state.app.skillsStartPosition);
+    const sectionEnd = useSelector((state: RootState) => state.app.skillsEndPosition);
 
-const Skills = () => {
     const tech = [
         aws,
         graphql,
@@ -51,24 +62,57 @@ const Skills = () => {
         vuetify 
     ];
 
-    return (
-        <div className="skills-container">
-            <h1 className="section-title">SKILLS。</h1>
-            {
-                tech.map(img => {
-                    return (
-                        <div className="skills-content" key={img}>
-                            <div className="skills-item">
-                                <div className="img-container">
-                                    <img src={img}/>
-                                </div>
-                            </div>
-                        </div> 
-                    )
-                })
+    const sectionTitleSkillsRef = useRef<HTMLDivElement>(null);
+    const skillsContentRef = useRef<HTMLDivElement>(null);
+
+    let lastKnownScrollPosition;
+    let inFocus = false;
+    document.addEventListener('scroll', function(e) {
+        lastKnownScrollPosition = window.scrollY;
+        if (sectionTitleSkillsRef.current && skillsContentRef.current) {
+            if (sectionStart && sectionEnd) {
+                if (lastKnownScrollPosition + 600 >= sectionStart && lastKnownScrollPosition <= sectionEnd) {
+                    inFocus = true;
+                    sectionTitleSkillsRef.current.classList.add("animate-in-left-to-right");
+                    sectionTitleSkillsRef.current.classList.remove("animate-out-right-to-left");
+
+                    skillsContentRef.current.classList.add("animate-in-right-to-left");
+                    skillsContentRef.current.classList.remove("animate-out-left-to-right");
+                } else {
+                    if (inFocus) {
+                        sectionTitleSkillsRef.current.classList.add("animate-out-right-to-left");
+                        sectionTitleSkillsRef.current.classList.remove("animate-in-left-to-right");
+
+                        skillsContentRef.current.classList.add("animate-out-left-to-right");
+                        skillsContentRef.current.classList.remove("animate-in-right-to-left");
+                        
+                        inFocus = false;
+                    }
+                }
             }
+        }
+    })
+
+    return (
+        <div ref={ref} className="skills-container">
+            <h1 ref={sectionTitleSkillsRef} className="section-title">SKILLS。</h1>
+            <div className="skills-content-container" ref={skillsContentRef}>
+                {
+                    tech.map(img => {
+                        return (
+                            <div className="skills-content" key={img}>
+                                <div className="skills-item" style={{backgroundColor: colorConfig.secondary}}>
+                                    <div className="img-container">
+                                        <img src={img}/>
+                                    </div>
+                                </div>
+                            </div> 
+                        )
+                    })
+                }
+            </div>
         </div>
     )
-}
+})
 
 export default Skills;
