@@ -230,6 +230,63 @@
   }
 }
 
+// Project Showcase
+.project-showcase {
+  border-radius: 10px;
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: white;
+  text-align: center;
+
+  .img-container {
+    margin: auto;
+    flex: 1;
+    overflow: hidden;
+    box-shadow: 0 0 30px 10px #ddd;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    .content-fill {
+      flex: 1;
+    }
+
+    .arrow {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border: 10px solid #ddd;
+      background-color: #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 30px 10px #ddd;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}
+
 // cv
 .cv {
   width: 800px;
@@ -425,6 +482,7 @@
     position: relative;
 
     .nav-info {
+      display: flex;
       border: 2px solid white;
       opacity: 0;
       position: absolute;
@@ -438,7 +496,21 @@
       color: white;
 
       padding: 15px 50px 15px 20px;
-      width: 150px;
+      width: 200px;
+
+      h5 {
+        margin: auto;
+      }
+
+      .img-container {
+        width: 40px;
+        height: 40px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
     }
 
     .navigation-item {
@@ -664,11 +736,29 @@
       box-shadow: 40px 40px 0 10px #ddd;
 
       .project-LHS {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
         position: relative;
         width: 50%;
         height: 100%;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+
+        .content-fill {
+          flex: 1;
+        }
+
+        .git {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
       }
 
       .project-RHS {
@@ -720,6 +810,10 @@
           background-color: aquamarine;
           color: white;
           box-shadow: 0 0 40px 10px #eee;
+
+          h3 {
+            color: white;
+          }
         }
 
         .content-fill {

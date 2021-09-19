@@ -8,6 +8,7 @@ import CanIT from '../assets/work/canit.png';
 import MaoProduce from '../assets/work/mao-produce.png';
 import FreshIsBest from '../assets/work/fresh-is-best.png';
 import WigramClouds from '../assets/work/wigram-clouds.png';
+import RMM from '../assets/work/RMM.png';
 
 // backend
 import aws from '../assets/skills/skill-set/aws.svg';
@@ -78,7 +79,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             icon: CanIT,
             title: 'CANIT LIMITED',
             subTitle: 'INFORMATION',
-            description: 'decription',
+            description: 'CanIT Limited landing page.',
             bgColor: '#700000',
             url: 'https://www.canit.co.nz/',
             techStack: [
@@ -91,7 +92,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             icon: CanIT,
             title: 'CANIT LIMITED',
             subTitle: 'BACKEND SYSTEM',
-            description: 'decription',
+            description: 'CanIT backend system uses CRUD to store, edit and delete hardware repair jobs, with functionalities to track the device history and automatic email and SMS message sending.',
             bgColor: '#700000',
             url: null,
             techStack: [
@@ -105,7 +106,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             icon: MaoProduce,
             title: 'MAO PRODUCE',
             subTitle: 'LANDING PAGE',
-            description: 'decription',
+            description: 'Landing page for a local Christchurch veggie producer.',
             bgColor: '#3A9821',
             url: 'https://www.maoproduce.co.nz/',
             techStack: [
@@ -117,7 +118,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             icon: FreshIsBest,
             title: 'FRESH IS BEST',
             subTitle: 'E-COMMERCE',
-            description: 'decription',
+            description: 'e-commerce website for a local Christchurch grocery store, using stripe for online payment.',
             bgColor: '#F4840C',
             url: 'https://www.freshisbest.kiwi/',
             techStack: [
@@ -130,7 +131,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             icon: WigramClouds,
             title: 'WIGRAM CLOUDS',
             subTitle: 'E-COMMERCE',
-            description: 'decription',
+            description: 'e-commerce website for a local Christchurch vape store, using Wind Cave API for online payment.',
             bgColor: '#950CF7',
             url: 'https://wigramclouds.co.nz/index.php?route=common/home',
             techStack: [
@@ -140,11 +141,11 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             ]
         },
         {
-            icon: CanIT,
+            icon: RMM,
             title: 'RICCARTON MALL MOTELS',
             subTitle: 'HOTEL BOOKING',
-            description: 'decription',
-            bgColor: '#950CF7',
+            description: 'Hotel booking website for a local Christchurch motel.',
+            bgColor: '#105E30',
             url: 'https://rmm.co.nz/',
             techStack: [
                 vue, 

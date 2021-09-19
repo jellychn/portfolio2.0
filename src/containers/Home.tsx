@@ -12,8 +12,6 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
     const [translateX, setTranslateX] = useState(0);
     const [translateY, setTranslateY] = useState(0);
 
-
-
     const darkMode = useSelector((state: RootState) => state.app.darkMode);
     const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
 

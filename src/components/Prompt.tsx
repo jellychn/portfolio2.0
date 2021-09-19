@@ -5,6 +5,7 @@ import { setPrompt } from '../redux/ducks/app';
 
 import ContactCard from './ContactCard';
 import WorkProject from './WorkProject';
+import ProjectShowcase from './ProjectShowcase';
 import CV from './CV';
 
 const Prompt = () => {
@@ -31,6 +32,8 @@ const Prompt = () => {
             return <WorkProject/>;
         } else if (promptType === 'cv') {
             return <CV/>;
+        } else if (promptType === 'projectShowCase') {
+            return <ProjectShowcase/>;
         }
     };
 
