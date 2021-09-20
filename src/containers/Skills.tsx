@@ -21,7 +21,7 @@ import python from '../assets/skills/skill-set/python.svg';
 
 // frontend
 import flutter from '../assets/skills/skill-set/flutter.svg';
-import nextJS from '../assets/skills/skill-set/next-js.svg';
+// import nextJS from '../assets/skills/skill-set/next-js.svg';
 import react from '../assets/skills/skill-set/react.svg';
 import redux from '../assets/skills/skill-set/redux.svg';
 import sass from '../assets/skills/skill-set/sass.svg';
@@ -47,7 +47,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
         javascript,
         python,
         flutter,
-        nextJS,
+        // nextJS,
         react,
         redux,
         sass,
