@@ -94,7 +94,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'Chess game using React.',
             LHSColor: 'aquamarine',
             RHSColor: 'white',
-            demo: '',
+            demo: 'https://jellychn.github.io/chess/',
             status: 'COMPLETED',
             git: 'https://github.com/jellychn/chess',
             techStack: [
