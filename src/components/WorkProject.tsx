@@ -36,13 +36,13 @@ const WorkProject = () => {
             }
         }
     
-    }, [projectLogoRef, projectBodyRef, projectInfoRef]);
+    }, [projectLogoRef, projectBodyRef, projectInfoRef, prompt]);
 
     let viewBtn = () => {
         if (project.url) {
             return (
                 <button className="view-button">
-                    <a href={project.url} target="_blank" style={{color: project.bgColor}}>
+                    <a href={project.url} target="_blank" rel="noreferrer" style={{color: project.bgColor}}>
                         <h3>VIEW PROJECT</h3>
                     </a>
                 </button>
@@ -57,7 +57,7 @@ const WorkProject = () => {
                 <div className="content">
                     <div ref={projectLogoRef} className="content-LHS">
                         <div className="img-container">
-                            <img src={project.icon}/>
+                            <img src={project.icon} alt={project.icon}/>
                         </div>
                     </div>
                     <div ref={projectInfoRef} className="content-RHS">
@@ -77,7 +77,7 @@ const WorkProject = () => {
                     project.techStack.map((img:string, index:number) => {
                         return (
                             <div className="img-container" key={index}>
-                                <img src={img}/>
+                                <img src={img} alt={img}/>
                             </div>
                         )
                     })

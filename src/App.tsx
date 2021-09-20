@@ -27,7 +27,6 @@ function App() {
   const dispatch = useDispatch();
 
 
-  let lastKnownScrollPosition = 0;
   const homeRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
@@ -37,10 +36,9 @@ function App() {
     const homeScrollHeight = homeRef.current?.scrollHeight || 0;
     const skillsScrollHeight = skillsRef.current?.scrollHeight || 0;
     const workScrollHeight = workRef.current?.scrollHeight || 0;
-    const projectsScrollHeight = projectsRef.current?.scrollHeight || 0;
 
     document.addEventListener('scroll', function(e) {
-      lastKnownScrollPosition = window.scrollY;
+      let lastKnownScrollPosition = window.scrollY;
 
       if (lastKnownScrollPosition >= 0 && lastKnownScrollPosition <= homeScrollHeight) {
         dispatch(setView("Hi, THERE 。"));
@@ -57,7 +55,7 @@ function App() {
     dispatch(setSkillsPositions({ref: skillsRef, startPosition: homeScrollHeight, endPosition: homeScrollHeight + skillsScrollHeight}));
     dispatch(setWorkPositions({ref: workRef, startPosition: homeScrollHeight + skillsScrollHeight, endPosition: homeScrollHeight + skillsScrollHeight + workScrollHeight}));
     dispatch(setProjectPositions({ref: projectsRef, startPosition: homeScrollHeight + skillsScrollHeight + workScrollHeight}));
-  }, [homeRef, skillsRef, workRef, projectsRef]);
+  }, [homeRef, skillsRef, workRef, projectsRef, dispatch]);
 
   return (
     <div className="App" style={{backgroundColor: colorConfig.primary}}>

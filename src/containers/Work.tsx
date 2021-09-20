@@ -12,33 +12,32 @@ import RMM from '../assets/work/RMM.png';
 
 // backend
 import aws from '../assets/skills/skill-set/aws.svg';
-import graphql from '../assets/skills/skill-set/graphql.svg';
-import node from '../assets/skills/skill-set/node.svg';
+// import graphql from '../assets/skills/skill-set/graphql.svg';
+// import node from '../assets/skills/skill-set/node.svg';
 
 // design
-import figma from '../assets/skills/skill-set/figma.svg';
-import photoshop from '../assets/skills/skill-set/phtotoshop.svg';
+// import figma from '../assets/skills/skill-set/figma.svg';
+// import photoshop from '../assets/skills/skill-set/phtotoshop.svg';
 
 // languages
-import dart from '../assets/skills/skill-set/dart.svg';
-import java from '../assets/skills/skill-set/java.svg';
-import javascript from '../assets/skills/skill-set/javascript.svg';
-import python from '../assets/skills/skill-set/python.svg';
+// import dart from '../assets/skills/skill-set/dart.svg';
+// import java from '../assets/skills/skill-set/java.svg';
+// import javascript from '../assets/skills/skill-set/javascript.svg';
+// import python from '../assets/skills/skill-set/python.svg';
 
 // frontend
 import flutter from '../assets/skills/skill-set/flutter.svg';
-import nextJS from '../assets/skills/skill-set/next-js.svg';
-import react from '../assets/skills/skill-set/react.svg';
-import redux from '../assets/skills/skill-set/redux.svg';
-import sass from '../assets/skills/skill-set/sass.svg';
-import typescript from '../assets/skills/skill-set/typescript.svg';
+// import nextJS from '../assets/skills/skill-set/next-js.svg';
+// import react from '../assets/skills/skill-set/react.svg';
+// import redux from '../assets/skills/skill-set/redux.svg';
+// import sass from '../assets/skills/skill-set/sass.svg';
+// import typescript from '../assets/skills/skill-set/typescript.svg';
 import vue from '../assets/skills/skill-set/vue.svg';
 import vuetify from '../assets/skills/skill-set/vuetify.svg';
 
 
 const Work = forwardRef<HTMLDivElement>((props, ref) => {
     const dispatch = useDispatch();
-    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
     const sectionStart = useSelector((state: RootState) => state.app.workStartPosition);
     const sectionEnd = useSelector((state: RootState) => state.app.workEndPosition);
 
@@ -166,7 +165,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
                                 <div className="work-item-content" style={{backgroundColor: project.bgColor}}>
                                     <div className="content">
                                         <div className="img-container">
-                                            <img src={project.icon}/>
+                                            <img src={project.icon} alt={project.icon}/>
                                         </div>
                                     </div>
                                 </div>
@@ -181,7 +180,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
                                             project.techStack.map(img => {
                                                 return (
                                                     <div className="img-container">
-                                                        <img src={img}/>
+                                                        <img src={img} alt={img}/>
                                                     </div>
                                                 )
                                             })

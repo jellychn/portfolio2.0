@@ -26,7 +26,7 @@ const ContactCard = () => {
         <div ref={contactCardRef} className="contact-card" style={{boxShadow: '0 0 100px 30px ' + colorConfig.shadow}}>
             <div className="contact-card-LHS">
                 <div className="avatar">
-                    <img src={Avatar}/>
+                    <img src={Avatar} alt={Avatar}/>
                 </div>
             </div>
             <div className="contact-card-RHS">
@@ -43,12 +43,12 @@ const ContactCard = () => {
                     <div className="content-fill"/>
                     <div className="img-container">
                         <a href="mailto: jchen123.862@gmail.com">
-                            <img src={Contact}/>
+                            <img src={Contact} alt={Contact}/>
                         </a>
                     </div>
                     <div className="img-container">
                         <a href="tel:+640210620879">
-                            <img src={Phone}/>
+                            <img src={Phone} alt={Phone}/>
                         </a>
                     </div>
                 </div>

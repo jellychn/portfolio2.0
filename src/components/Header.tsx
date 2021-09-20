@@ -20,11 +20,11 @@ const Header = () => {
                     backgroundColor: colorConfig.navigation,
                     boxShadow: '-10px 10px ' + colorConfig.teriary
                 }}>
-                <img src={darkMode ? Sun:Moon}/>
+                <img src={darkMode ? Sun:Moon} alt="timeOfDay"/>
             </div>
             <header className="App-header">
                 <div className="flex">
-                    <img className="logo" src={darkMode ? LogoDark:Logo}/>
+                    <img className="logo" src={darkMode ? LogoDark:Logo} alt="logo"/>
                     <span className="space"/>
                     <h2 style={{color: colorConfig.navigation}}>{view}</h2>
                 </div>

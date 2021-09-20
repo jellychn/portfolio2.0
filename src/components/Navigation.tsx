@@ -51,7 +51,7 @@ const Navigation = () => {
             <div className="navigation-item-container">
                 <div ref={homeNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
                     <div className="img-container">
-                        <img src={HomeImg}/>
+                        <img src={HomeImg} alt={HomeImg}/>
                     </div>
                     <h5>HOME</h5>
                 </div>
@@ -60,7 +60,7 @@ const Navigation = () => {
             <div className="navigation-item-container">
                 <div ref={skillsNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
                     <div className="img-container">
-                        <img src={SkillsImg}/>
+                        <img src={SkillsImg} alt={SkillsImg}/>
                     </div>
                     <h5>SKILLS</h5>
                 </div>
@@ -69,7 +69,7 @@ const Navigation = () => {
             <div className="navigation-item-container">
                 <div ref={workNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
                     <div className="img-container">
-                        <img src={WorkImg}/>
+                        <img src={WorkImg} alt={WorkImg}/>
                     </div>
                     <h5>WORK</h5>
                 </div>
@@ -78,7 +78,7 @@ const Navigation = () => {
             <div className="navigation-item-container">
                 <div ref={projectNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
                     <div className="img-container">
-                        <img src={ProjectsImg}/>
+                        <img src={ProjectsImg} alt={ProjectsImg}/>
                     </div>
                     <h5>PROJECTS</h5>
                 </div>

@@ -19,7 +19,6 @@ body {
 }
 
 .container {
-  width: 1400px;
   margin: auto;
 }
 
@@ -38,4 +37,18 @@ code {
 
 .space {
   flex: 1;
+}
+
+
+// Responsive
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .container {
+    width: 1400px;
+  }
 }

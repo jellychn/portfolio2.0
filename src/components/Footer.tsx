@@ -45,20 +45,20 @@ const Footer = () => {
                 <div className="content" style={{backgroundColor: colorConfig.primary,borderTop: '2px solid ' + colorConfig.secondary, borderBottom: '2px solid ' + colorConfig.secondary}}>
                     <div className="content-items">
                         <div className="content-item" onMouseEnter={() => {dispatch(setFooterText('LINKED IN'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
-                            <a href="https://www.linkedin.com/in/jerry-chen-3235171b4" target="_blank">
-                                <img className="icon" src={Linkedin}/>
+                            <a href="https://www.linkedin.com/in/jerry-chen-3235171b4" target="_blank" rel="noreferrer">
+                                <img className="icon" src={Linkedin} alt={Linkedin}/>
                             </a>
                         </div>
                         <div className="content-item" onMouseEnter={() => {dispatch(setFooterText('GITHUB'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
-                            <a href="https://github.com/jellychn" target="_blank">
-                                <img className="icon" src={GitHub}/>
+                            <a href="https://github.com/jellychn" target="_blank" rel="noreferrer">
+                                <img className="icon" src={GitHub} alt={GitHub}/>
                             </a>
                         </div>
                         <div className="content-item" onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('contact'))}} onMouseEnter={() => {dispatch(setFooterText('CONTACT'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
-                            <img className="icon" src={Contact}/>
+                            <img className="icon" src={Contact} alt={Contact}/>
                         </div>
                         <div className="content-item" onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('cv'))}} onMouseEnter={() => {dispatch(setFooterText('CV'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
-                            <img className="icon" src={CV}/>
+                            <img className="icon" src={CV} alt={CV}/>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,3 @@
-// .App {
-//   text-align: center;
-// }
-
 .section-title {
   margin-bottom: 60px;
   color: #CCC;
@@ -31,13 +27,11 @@
 
 // Work Project
 .work-project {
-  // opacity: 0;
   z-index: 2;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 850px;
   height: 70%;
   background-color: white;
   display: flex;
@@ -74,7 +68,6 @@
       margin: auto;
 
       .content-LHS {
-        // opacity: 0;
         position: relative;
         left: -240px;
         width: 50%;
@@ -100,7 +93,6 @@
       }
 
       .content-RHS {
-        // opacity: 0;
         position: relative;
         right: -200px;
         color: white;
@@ -147,7 +139,6 @@
 .contact-card {
   z-index: 2;
   border: 3px solid white;
-  width: 1000px;
   height: 600px;
   background-color: white;
   position: relative;
@@ -195,12 +186,10 @@
 
       .content-main-content {
         h1 {
-          font-size: 50px;
         }
   
         h2 {
           color: #FFCC67;
-          font-size: 30px;
         }
       }
     }
@@ -289,7 +278,6 @@
 
 // cv
 .cv {
-  width: 800px;
   height: 80%;
   position: absolute;
   background-color: white;
@@ -363,6 +351,7 @@
 .logo-container {
   position: relative;
   left: -200px;
+
   .App-logo {
   
   }
@@ -384,8 +373,6 @@
 }
 
 .light-dark-mode {
-  width: 80px;
-  height: 80px;
   position: fixed;
   right: 0px; 
   top: 100px;
@@ -528,6 +515,7 @@
 .home-content {
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 
   .content {
     position: absolute;
@@ -538,20 +526,18 @@
     .hello {
       margin-bottom: 10px;
       text-shadow: 2px 2px #FFF;
-      font-size: 25px;
     }
 
     .name-container {
-
+      position: relative;
+      left: 200px;
     }
   
     .name {
-      font-size: 100px;
       text-shadow: 2px 2px #ff0000;
     }
   
     .description {
-      font-size: 60px;
       color: #FF5850;
       text-shadow: 2px 2px #000;
     }
@@ -559,17 +545,14 @@
     .sub-description {
       position: relative;
       bottom: -200px;
-      margin-top: 60px;
     }
   
     .sub-description-1 {
       margin-top: 40px;
-      font-size: 30px;
     }
 
     .sub-description-2 {
       margin-top: 40px;
-      font-size: 20px;
     }
   }
 }
@@ -592,8 +575,6 @@
     margin: auto;
 
     .skills-item {
-      width: 140px;
-      height: 140px;
       box-shadow: 15px 15px 0 3px #ddd;
       padding: 30px;
       margin: 40px;
@@ -620,21 +601,18 @@
 
 // Work
 .work-container {
+  overflow: hidden;
   min-height: 100%;
   padding: 300px 0px;
-  overflow: auto;
-
 
   .work-item-container {
     opacity: 0;
-    width: 70%;
     margin: auto;
     position: relative;
     right: -200px;
 
     .work-item-outter {
       float: left;
-      width: 50%;
       height: 600px;
       padding: 60px;
 
@@ -716,6 +694,7 @@
 
 // Projects
 .projects-container {
+  overflow: hidden;
   min-height: 100%;
   padding: 300px 0;
 
@@ -728,9 +707,7 @@
 
     .project {
       margin-bottom: 100px;
-      display: flex;
       width: 100%;
-      height: 500px;
       background-color: #ddd;
       border-radius: 10px;
       box-shadow: 40px 40px 0 10px #ddd;
@@ -740,10 +717,6 @@
         flex-direction: column;
         padding: 20px;
         position: relative;
-        width: 50%;
-        height: 100%;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
 
         .content-fill {
           flex: 1;
@@ -763,10 +736,6 @@
 
       .project-RHS {
         position: relative;
-        width: 50%;
-        height: 100%;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
       }
 
       .img-container {
@@ -1019,4 +988,208 @@
 }
 
 
-// skills animations
+// Responsive
+@media only screen and (max-width: 800px) {
+  .section-title, .navigation, .logo-container {
+    display: none;
+  }
+
+  .cv {
+    width: 90%;
+  }
+
+  .light-dark-mode {
+    width: 60px;
+    height: 60px;
+  }
+
+  .work-project {
+    width: 90%;
+  }
+
+  .contact-card {
+    width: 90%;
+
+    .contact-card-RHS {
+      .contact-main {
+        h1 {
+          font-size: 35px;
+        }
+  
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .home-content {
+    .hello {
+      font-size: 20px;
+    }
+
+    .name {
+      font-size: 60px;
+    }
+
+    .description {
+      font-size: 30px;
+    }
+
+    .sub-description {
+      margin-top: 30px;
+    }
+
+    .sub-description-1 {
+      font-size: 20px;
+    }
+
+    .sub-description-2 {
+      font-size: 15px;
+    }
+  }
+
+  .skills-container {
+    .skills-content {
+      width: 90%;
+      
+      .skills-item {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .work-container {
+    .work-item-container {
+      width: 90%;
+
+      .work-item-outter {
+        width: 100%;
+      }
+    }
+  }
+  
+  .projects-container {
+    .project {
+      display: block;
+      height: auto;
+
+      .project-LHS {
+        width: 100%;
+        height: 300px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+  
+      .project-RHS {
+        width: 100%;
+        height: 500px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .section-title, .navigation, .logo-container {
+    display: block;
+  }
+
+  .cv {
+    width: 750px;
+  }
+
+  .light-dark-mode {
+    width: 80px;
+    height: 80px;
+  }
+
+  .work-project {
+    width: 750px;
+  }
+
+  .contact-card {
+    width: 800px;
+
+    .contact-card-RHS {
+      .contact-main {
+        h1 {
+          font-size: 50px;
+        }
+  
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .home-content {
+    .hello {
+      font-size: 25px;
+    }
+
+    .name {
+      font-size: 100px;
+    }
+
+    .description {
+      font-size: 60px;
+    }
+
+    .sub-description {
+      margin-top: 60px;
+    }
+
+    .sub-description-1 {
+      font-size: 30px;
+    }
+
+    .sub-description-2 {
+      font-size: 20px;
+    }
+  }
+
+  .skills-container {
+    .skills-content {
+      width: 70%;
+      .skills-item {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+
+  .work-container {
+    .work-item-container {
+      width: 80%;
+
+      .work-item-outter {
+        width: 50%;
+      }
+    }
+  }
+
+  .projects-container {
+    .project {
+      display: flex;
+      height: 500px;
+
+      .project-LHS {
+        width: 50%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+  
+      .project-RHS {
+        width: 50%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

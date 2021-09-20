@@ -4,12 +4,6 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../redux/configureStore';
 
 
-import Backend from '../assets/skills/backend.svg';
-import Design from '../assets/skills/design.svg';
-import Languages from '../assets/skills/languages.svg';
-import Frontend from '../assets/skills/frontend.svg';
-
-
 // backend
 import aws from '../assets/skills/skill-set/aws.svg';
 import graphql from '../assets/skills/skill-set/graphql.svg';
@@ -17,7 +11,7 @@ import node from '../assets/skills/skill-set/node.svg';
 
 // design
 import figma from '../assets/skills/skill-set/figma.svg';
-import photoshop from '../assets/skills/skill-set/phtotoshop.svg';
+import photoshop from '../assets/skills/skill-set/photoshop.svg';
 
 // languages
 import dart from '../assets/skills/skill-set/dart.svg';
@@ -59,7 +53,8 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
         sass,
         typescript,
         vue,
-        vuetify 
+        vuetify,
+        photoshop
     ];
 
     const sectionTitleSkillsRef = useRef<HTMLDivElement>(null);
@@ -103,7 +98,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
                             <div className="skills-content" key={img}>
                                 <div className="skills-item" style={{backgroundColor: colorConfig.secondary}}>
                                     <div className="img-container">
-                                        <img src={img}/>
+                                        <img src={img} alt={img}/>
                                     </div>
                                 </div>
                             </div> 

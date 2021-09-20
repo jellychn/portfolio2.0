@@ -47,7 +47,7 @@ const initialState = {
     projectStartPosition: null,
 };
 
-export default (state = initialState, action: { type: any; payload: any; }) => {
+const resolver = (state = initialState, action: { type: any; payload: any; }) => {
     switch (action.type) {
         case SET_FOOTER_TEXT:
             return {...state, footerText: action.payload}
@@ -120,6 +120,8 @@ export default (state = initialState, action: { type: any; payload: any; }) => {
             return state;
     }
 };
+
+export default resolver;
 
 export const setFooterText = (payload: String) => ({
     type: SET_FOOTER_TEXT,

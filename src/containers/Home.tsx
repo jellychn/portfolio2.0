@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/configureStore';
@@ -21,6 +21,7 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
 
     let lastKnownScrollPosition;
     let inFocus = false;
+    
     document.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
         if (homeLogoRef.current && homeNameRef.current && homeDescriptionRef.current) {
@@ -82,13 +83,13 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
     let logo;
     if (darkMode) {
         logo = <div className="moon">
-            <img src={Moon}/>
-            <img src={Star} className="star App-logo"/>
+            <img src={Moon} alt={Moon}/>
+            <img src={Star} className="star App-logo" alt={Star}/>
         </div>
     } else {
         logo = <div className="sun">
-            <img src={Sun} className="App-logo"/>
-            <img src={Cloud} className="cloud"/>
+            <img src={Sun} className="App-logo" alt={Sun}/>
+            <img src={Cloud} className="cloud" alt={Cloud}/>
         </div>
     }
 

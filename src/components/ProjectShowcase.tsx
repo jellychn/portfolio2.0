@@ -47,15 +47,15 @@ const ProjectShowcase = () => {
             <h2>{project.toUpperCase()} PROJECT</h2>
             <div className="carousel">
                 <div className="arrow" onClick={prev}>
-                    <img src={left}/>
+                    <img src={left} alt={left}/>
                 </div>
                 <div className="content-fill"/>
                 <div className="arrow" onClick={next}>
-                    <img src={right}/>
+                    <img src={right} alt={right}/>
                 </div>
             </div>
             <div className="img-container">
-                <img src={projects[project][index]}/>
+                <img src={projects[project][index]} alt={projects[project][index]}/>
             </div>
         </div>
     )
