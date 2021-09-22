@@ -21,6 +21,12 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
 
     let lastKnownScrollPosition;
     let inFocus = false;
+
+    if (homeLogoRef.current && homeNameRef.current && homeDescriptionRef.current) {
+        homeLogoRef.current.classList.add('animate-in-left-to-right');
+        homeNameRef.current.classList.add('animate-in-right-to-left');
+        homeDescriptionRef.current.classList.add('animate-in-bottom-to-top');
+    }
     
     document.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
