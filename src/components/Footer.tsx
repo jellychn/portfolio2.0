@@ -44,11 +44,11 @@ const Footer = () => {
                 <div className="filler" style={{backgroundColor: colorConfig.primary}}/>
                 <div className="content" style={{backgroundColor: colorConfig.primary,borderTop: '2px solid ' + colorConfig.secondary, borderBottom: '2px solid ' + colorConfig.secondary}}>
                     <div className="content-items">
-                        <div className="content-item" onMouseEnter={() => {dispatch(setFooterText('LINKED IN'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
+                        {/* <div className="content-item" onMouseEnter={() => {dispatch(setFooterText('LINKED IN'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
                             <a href="https://www.linkedin.com/in/jerry-chen-3235171b4" target="_blank" rel="noreferrer">
                                 <img className="icon" src={Linkedin} alt={Linkedin}/>
                             </a>
-                        </div>
+                        </div> */}
                         <div className="content-item" onMouseEnter={() => {dispatch(setFooterText('GITHUB'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
                             <a href="https://github.com/jellychn" target="_blank" rel="noreferrer">
                                 <img className="icon" src={GitHub} alt={GitHub}/>
