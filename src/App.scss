@@ -59,6 +59,11 @@
       color: #263238;
       background-color: white;
       border-radius: 3px;
+      transition: background-color 500ms;
+
+      &:hover {
+        background-color: #ddd;
+      }
     }
 
     .content {
@@ -779,6 +784,11 @@
           background-color: aquamarine;
           color: white;
           box-shadow: 0 0 40px 10px #eee;
+          transition: background-color 500ms;
+
+          &:hover {
+            background-color:mediumaquamarine;
+          }
 
           h3 {
             color: white;

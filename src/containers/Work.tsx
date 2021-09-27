@@ -132,7 +132,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             subTitle: 'E-COMMERCE',
             description: 'e-commerce website for a local Christchurch vape store, using Wind Cave API for online payment.',
             bgColor: '#950CF7',
-            url: 'https://wigramclouds.co.nz/index.php?route=common/home',
+            url: 'https://wigramclouds.co.nz/',
             techStack: [
                 vue, 
                 vuetify,
