@@ -11,7 +11,7 @@
   height: 100vh;
   left: 0px;
   top: 0px;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.5);
   z-index: 3;
 
   .prompt-tint {
@@ -36,9 +36,7 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 100px 30px #ddd;
   border-top-right-radius: 30px;
-  border: 3px solid white;
 
   .content-fill {
     flex: 1;
@@ -151,7 +149,6 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  box-shadow: 0 0 100px 30px #ddd;
 
   .contact-card-LHS {
     background-color: #FFCC67;
@@ -244,7 +241,6 @@
     margin: auto;
     flex: 1;
     overflow: hidden;
-    box-shadow: 0 0 30px 10px #ddd;
 
     img {
       object-fit: cover;
@@ -270,7 +266,6 @@
       border: 10px solid #ddd;
       background-color: #ddd;
       border-radius: 5px;
-      box-shadow: 0 0 30px 10px #ddd;
 
       img {
         display: block;
@@ -366,37 +361,19 @@
 // header
 .App-header {
   width: 100vw;
-  background-color: transparent;
-  padding: 50px;
+  padding: 20px;
   position: fixed;
+  z-index: 1;
 }
 
 .logo {
-  margin-top: 80px;
+  margin-top: 10px;
   width: 60px;
   height: 60px;
 }
 
-.light-dark-mode {
-  position: fixed;
-  right: 0px; 
-  top: 100px;
-  cursor: pointer;
-  z-index: 1;
-  background-color: #eee;
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-  transition: background-color 1s ease;
-
-  img {
-    width: 40px;
-    height: 40px;
-    margin: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+h2 {
+  margin-top: 10px;
 }
 
 // footer
@@ -530,7 +507,6 @@
 
     .hello {
       margin-bottom: 10px;
-      text-shadow: 2px 2px #FFF;
     }
 
     .name-container {
@@ -565,41 +541,53 @@
 // Skills
 .skills-container {
   min-height: 100%;
-  padding: 500px 0px;
+  padding: 100px 0px;
   overflow: hidden;
 
-  .skills-content-container {
-    opacity: 0;
-    position: relative;
-    right: -200px;
-    overflow: auto;
+  h1 {
+    display: inline-block;
   }
+}
 
-  .skills-content {
-    width: 70%;
-    margin: auto;
+.skills-content-container {
+  opacity: 0;
+  position: relative;
+  right: -200px;
+  overflow: auto;
+  margin-bottom: 40px;
+}
 
-    .skills-item {
-      box-shadow: 15px 15px 0 3px #ddd;
-      padding: 30px;
-      margin: 40px;
-      float: left;
-      border-right: 4px solid #ccc;
-      border-bottom: 4px solid #ccc;
+.skills-content {
+  width: 70%;
+  margin: auto;
 
-      .img-container {
-        width: 100%;
-        height: 100%;
+  .skills-item {
+    padding: 30px;
+    margin: 40px;
+    float: left;
+    border-right: 4px solid #ccc;
+    border-bottom: 4px solid #ccc;
 
-        img {
-          max-width: 100%;
-          max-height: 100%;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-        }
+    h4 {
+      color: #CCC;
+    }
+
+    .img-container {
+      width: 100%;
+      height: 100%;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
+    }
 
+    h4 {
+      margin-top: 50px;
+      text-align: center;
     }
   }
 }
@@ -608,7 +596,7 @@
 .work-container {
   overflow: hidden;
   min-height: 100%;
-  padding: 300px 0px;
+  padding: 100px 0px;
 
   .work-item-container {
     opacity: 0;
@@ -628,7 +616,6 @@
         border-top-right-radius: 20px;
         display: flex;
         flex-direction: column;
-        box-shadow: 30px 30px #ddd;
         cursor: pointer;
 
         .work-item-content {
@@ -701,7 +688,7 @@
 .projects-container {
   overflow: hidden;
   min-height: 100%;
-  padding: 300px 0;
+  padding: 100px 0;
 
   .project-items-container {
     opacity: 0;
@@ -715,7 +702,6 @@
       width: 100%;
       background-color: #ddd;
       border-radius: 10px;
-      box-shadow: 40px 40px 0 10px #ddd;
 
       .project-LHS {
         display: flex;
@@ -783,7 +769,6 @@
           border: 0px;
           background-color: aquamarine;
           color: white;
-          box-shadow: 0 0 40px 10px #eee;
           transition: background-color 500ms;
 
           &:hover {
@@ -1008,11 +993,6 @@
     width: 90%;
   }
 
-  .light-dark-mode {
-    width: 60px;
-    height: 60px;
-  }
-
   .work-project {
     width: 90%;
   }
@@ -1109,11 +1089,6 @@
 
   .cv {
     width: 750px;
-  }
-
-  .light-dark-mode {
-    width: 80px;
-    height: 80px;
   }
 
   .work-project {

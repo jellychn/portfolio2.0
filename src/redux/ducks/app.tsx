@@ -24,7 +24,7 @@ const initialState = {
         primary: '#F8F9FB',
         secondary: '#FFFFFF',
         teriary: '#CCCCCC',
-        highlight: '#FFCC67',
+        highlight: '#333333',
         shadow: '#EEEEEE',
         project: 'aquamarine',
         navigation: '#FFCC67'
@@ -74,7 +74,7 @@ const resolver = (state = initialState, action: { type: any; payload: any; }) =>
                         primary: '#F8F9FB',
                         secondary: '#FFFFFF',
                         teriary: '#CCCCCC',
-                        highlight: '#FFCC67',
+                        highlight: '#333333',
                         shadow: '#EEEEEE',
                         project: 'aquamarine',
                         navigation: '#FFCC67'

@@ -38,6 +38,7 @@ import vuetify from '../assets/skills/skill-set/vuetify.svg';
 
 const Work = forwardRef<HTMLDivElement>((props, ref) => {
     const dispatch = useDispatch();
+    const prevSection = useSelector((state: RootState) => state.app.skillsRef);
     const sectionStart = useSelector((state: RootState) => state.app.workStartPosition);
     const sectionEnd = useSelector((state: RootState) => state.app.workEndPosition);
 
@@ -49,8 +50,8 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
     document.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
         if (sectionTitleWorkRef.current && workContentRef.current) {
-            if (sectionStart && sectionEnd) {
-                if (lastKnownScrollPosition >= sectionStart && lastKnownScrollPosition <= sectionEnd) {
+            if (sectionStart && sectionEnd && prevSection) {
+                if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.8) && lastKnownScrollPosition <= sectionEnd) {
                     inFocus = true;
                     sectionTitleWorkRef.current.classList.add("animate-in-left-to-right");
                     sectionTitleWorkRef.current.classList.remove("animate-out-right-to-left");

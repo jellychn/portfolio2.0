@@ -7,7 +7,6 @@ import Contact from '../assets/contact.svg';
 import Phone from '../assets/phone.svg';
 
 const ContactCard = () => {
-    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
     const prompt = useSelector((state: RootState) => state.app.prompt);
 
     const contactCardRef = useRef<HTMLDivElement>(null);
@@ -23,7 +22,7 @@ const ContactCard = () => {
     }
 
     return (
-        <div ref={contactCardRef} className="contact-card" style={{boxShadow: '0 0 100px 30px ' + colorConfig.shadow}}>
+        <div ref={contactCardRef} className="contact-card">
             <div className="contact-card-LHS">
                 <div className="avatar">
                     <img src={Avatar} alt={Avatar}/>

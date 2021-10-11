@@ -31,7 +31,7 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
     document.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
         if (homeLogoRef.current && homeNameRef.current && homeDescriptionRef.current) {
-            if (lastKnownScrollPosition < 200) {
+            if (lastKnownScrollPosition < 500) {
                 inFocus = true;
                 homeLogoRef.current.classList.add('animate-in-left-to-right');
                 homeLogoRef.current.classList.remove('animate-out-right-to-left');
@@ -110,14 +110,14 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
                     </div>
                     
                     <div ref={homeNameRef} className="name-container">
-                        <p className="hello">HELLO, I'M</p>
+                        <p className="hello" style={{color: colorConfig.highlight}}>HELLO, I'M</p>
                         <h1 className="name">JERRY,</h1>
                         <h1 className="description">AND I'M A DEVELOPER。</h1>
                     </div>
 
                     <p ref={homeDescriptionRef} className="sub-description">
-                        <span className="sub-description-1" style={{color: colorConfig.highlight, textShadow: '2px 2px ' + colorConfig.secondary}}>FULLSTACK DEVELOPER。</span><br/>
-                        <span className="sub-description-2" style={{color: colorConfig.highlight, textShadow: '2px 2px ' + colorConfig.secondary}}>PASSION FOR DESIGN。</span>
+                        <span className="sub-description-1" style={{color: colorConfig.highlight}}>FULLSTACK DEVELOPER。</span><br/>
+                        <span className="sub-description-2" style={{color: colorConfig.highlight}}>PASSION FOR DESIGN。</span>
                     </p>
                 </div>
             </div>

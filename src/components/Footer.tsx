@@ -1,15 +1,18 @@
 import { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/configureStore';
-import { setPrompt, setPromptType, setFooterText } from '../redux/ducks/app';
+import { setPrompt, setPromptType, setFooterText, setDarkMode } from '../redux/ducks/app';
 
 import Linkedin from '../assets/linkedin.svg';
 import GitHub from '../assets/github.svg';
 import Contact from '../assets/contact.svg';
 import CV from '../assets/cv.svg';
+import Moon from '../assets/home/moon-light.svg';
+import Sun from '../assets/home/sun-light.svg';
 
 const Footer = () => {
     const dispatch = useDispatch();
+    const darkMode = useSelector((state: RootState) => state.app.darkMode);
     const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
     const footerText = useSelector((state: RootState) => state.app.footerText);
 
@@ -32,16 +35,12 @@ const Footer = () => {
     return (
         <div>
             <p ref={hoverTextRef} className="hover-text" style={{color: colorConfig.highlight, textShadow: '2px 2px ' + colorConfig.secondary}}>{footerText}</p>
-            <div className="App-footer-shadow" style={{boxShadow: '0px -80px 100px 150px ' + colorConfig.primary}}>
-                <div className="filler" style={{backgroundColor: colorConfig.primary}}/>
-                <div className="shadow-content" style={{boxShadow: '0px -50px 100px 80px ' + colorConfig.shadow}}>
-
+            <div className="App-footer-shadow">
+                <div className="shadow-content" style={{boxShadow: '0px -20px 50px 80px ' + colorConfig.shadow}}>
                 </div>
-                <div className="filler" style={{backgroundColor: colorConfig.primary}}/>
             </div>
 
             <div className="App-footer">
-                <div className="filler" style={{backgroundColor: colorConfig.primary}}/>
                 <div className="content" style={{backgroundColor: colorConfig.primary,borderTop: '2px solid ' + colorConfig.secondary, borderBottom: '2px solid ' + colorConfig.secondary}}>
                     <div className="content-items">
                         {/* <div className="content-item" onMouseEnter={() => {dispatch(setFooterText('LINKED IN'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
@@ -60,9 +59,11 @@ const Footer = () => {
                         <div className="content-item" onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('cv'))}} onMouseEnter={() => {dispatch(setFooterText('CV'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
                             <img className="icon" src={CV} alt={CV}/>
                         </div>
+                        <div className="content-item" onClick={() => dispatch(setDarkMode(!darkMode))}>
+                            <img className="icon" src={darkMode ? Sun:Moon} alt={darkMode ? Sun:Moon}/>
+                        </div>
                     </div>
                 </div>
-                <div className="filler" style={{backgroundColor: colorConfig.primary}}/>
             </div>
         </div>
     )

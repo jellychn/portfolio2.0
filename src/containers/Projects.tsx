@@ -39,6 +39,7 @@ import vue from '../assets/skills/skill-set/vue.svg';
 
 const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     const dispatch = useDispatch();
+    const prevSection = useSelector((state: RootState) => state.app.workRef);
     const sectionStart = useSelector((state: RootState) => state.app.projectStartPosition);
 
     const sectionTitleProjectRef = useRef<HTMLDivElement>(null);
@@ -49,8 +50,8 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     document.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
         if (sectionTitleProjectRef.current && projectContentRef.current) {
-            if (sectionStart) {
-                if (lastKnownScrollPosition >= sectionStart && lastKnownScrollPosition) {
+            if (sectionStart && prevSection) {
+                if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.5)) {
                     inFocus = true;
                     sectionTitleProjectRef.current.classList.add("animate-in-left-to-right");
                     sectionTitleProjectRef.current.classList.remove("animate-out-right-to-left");

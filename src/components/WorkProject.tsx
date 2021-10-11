@@ -4,7 +4,6 @@ import { RootState } from '../redux/configureStore';
 
 
 const WorkProject = () => {
-    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
     const project = useSelector((state: RootState) => state.app.item);
     const prompt = useSelector((state: RootState) => state.app.prompt);
 
@@ -51,7 +50,7 @@ const WorkProject = () => {
     }
 
     return (
-        <div  ref={projectBodyRef} className="work-project" style={{boxShadow: '0 0 100px 30px ' + colorConfig.shadow}}>
+        <div  ref={projectBodyRef} className="work-project">
             <div className="main" style={{backgroundColor: project.bgColor}}>
                 {viewBtn()}
                 <div className="content">

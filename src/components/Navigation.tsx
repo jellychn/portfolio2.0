@@ -55,7 +55,7 @@ const Navigation = () => {
                     </div>
                     <h5>HOME</h5>
                 </div>
-                <div className="navigation-item" style={{backgroundColor: view === 'Hi, THERE 。' ? colorConfig.highlight:colorConfig.teriary}} onMouseEnter={() => onMouseOver(homeNavRef)} onMouseLeave={() => onMouseLeave(homeNavRef)} onClick={() => scrollTo(homeRef, 'HOME')}/>
+                <div className="navigation-item" style={{backgroundColor: view === 'Hi, THERE 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(homeNavRef)} onMouseLeave={() => onMouseLeave(homeNavRef)} onClick={() => scrollTo(homeRef, 'HOME')}/>
             </div>
             <div className="navigation-item-container">
                 <div ref={skillsNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
@@ -64,7 +64,7 @@ const Navigation = () => {
                     </div>
                     <h5>SKILLS</h5>
                 </div>
-                <div className="navigation-item" style={{backgroundColor: view === 'SKILLS 。' ? colorConfig.highlight:colorConfig.teriary}} onMouseEnter={() => onMouseOver(skillsNavRef)} onMouseLeave={() => onMouseLeave(skillsNavRef)} onClick={() => scrollTo(skillsRef, 'SKILLS')}/>
+                <div className="navigation-item" style={{backgroundColor: view === 'SKILLS 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(skillsNavRef)} onMouseLeave={() => onMouseLeave(skillsNavRef)} onClick={() => scrollTo(skillsRef, 'SKILLS')}/>
             </div>
             <div className="navigation-item-container">
                 <div ref={workNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
@@ -73,7 +73,7 @@ const Navigation = () => {
                     </div>
                     <h5>WORK</h5>
                 </div>
-                <div className="navigation-item" style={{backgroundColor: view === 'WORK 。' ? colorConfig.highlight:colorConfig.teriary}} onMouseEnter={() => onMouseOver(workNavRef)} onMouseLeave={() => onMouseLeave(workNavRef)} onClick={() => scrollTo(workRef, 'WORK')}/>
+                <div className="navigation-item" style={{backgroundColor: view === 'WORK 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(workNavRef)} onMouseLeave={() => onMouseLeave(workNavRef)} onClick={() => scrollTo(workRef, 'WORK')}/>
             </div>
             <div className="navigation-item-container">
                 <div ref={projectNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
@@ -82,7 +82,7 @@ const Navigation = () => {
                     </div>
                     <h5>PROJECTS</h5>
                 </div>
-                <div className="navigation-item" style={{backgroundColor: view === 'PROJECTS 。' ? colorConfig.highlight:colorConfig.teriary}} onMouseEnter={() => onMouseOver(projectNavRef)} onMouseLeave={() => onMouseLeave(projectNavRef)} onClick={() => scrollTo(projectRef, 'PROJECTS')}/>
+                <div className="navigation-item" style={{backgroundColor: view === 'PROJECTS 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(projectNavRef)} onMouseLeave={() => onMouseLeave(projectNavRef)} onClick={() => scrollTo(projectRef, 'PROJECTS')}/>
             </div>
         </div>
     )

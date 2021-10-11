@@ -13,7 +13,6 @@ import SYimg3 from '../assets/projects/sylo-project/dark-view.png';
 
 const ProjectShowcase = () => {
     let [index, setIndex] = useState(0);
-    const colorConfig = useSelector((state: RootState) => state.app.colorConfig);
     const project = useSelector((state: RootState) => state.app.item);
 
     const projects:any = {
@@ -43,7 +42,7 @@ const ProjectShowcase = () => {
     }
 
     return (
-        <div className="project-showcase" style={{boxShadow: '0 0 100px 30px ' + colorConfig.shadow}}>
+        <div className="project-showcase">
             <h2>{project.toUpperCase()} PROJECT</h2>
             <div className="carousel">
                 <div className="arrow" onClick={prev}>
