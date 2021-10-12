@@ -95,7 +95,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
         },
         {
             logo: python,
-            name: 'GraphQL'
+            name: 'Python'
         },
         {
             logo: java,
@@ -125,8 +125,8 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
             if (sectionStart && sectionEnd && prevSection) {
                 if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.8) && lastKnownScrollPosition <= sectionEnd) {
                     inFocus = true;
-                    sectionTitleSkillsRef.current.classList.add("animate-in-left-to-right");
-                    sectionTitleSkillsRef.current.classList.remove("animate-out-right-to-left");
+                    sectionTitleSkillsRef.current.classList.add("animate-fade-in");
+                    sectionTitleSkillsRef.current.classList.remove("animate-fade-out");
 
                     skillsContentRefFE.current.classList.add("animate-in-right-to-left");
                     skillsContentRefFE.current.classList.remove("animate-out-left-to-right");
@@ -138,8 +138,8 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
                     skillsContentRefLang.current.classList.remove("animate-out-left-to-right");
                 } else {
                     if (inFocus) {
-                        sectionTitleSkillsRef.current.classList.add("animate-out-right-to-left");
-                        sectionTitleSkillsRef.current.classList.remove("animate-in-left-to-right");
+                        sectionTitleSkillsRef.current.classList.add("animate-fade-out");
+                        sectionTitleSkillsRef.current.classList.remove("animate-fade-in");
 
                         skillsContentRefFE.current.classList.add("animate-out-left-to-right");
                         skillsContentRefFE.current.classList.remove("animate-in-right-to-left");

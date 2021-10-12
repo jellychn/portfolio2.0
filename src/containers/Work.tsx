@@ -51,21 +51,21 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
         lastKnownScrollPosition = window.scrollY;
         if (sectionTitleWorkRef.current && workContentRef.current) {
             if (sectionStart && sectionEnd && prevSection) {
-                if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.8) && lastKnownScrollPosition <= sectionEnd) {
+                if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.5) && lastKnownScrollPosition <= sectionEnd) {
                     inFocus = true;
-                    sectionTitleWorkRef.current.classList.add("animate-in-left-to-right");
-                    sectionTitleWorkRef.current.classList.remove("animate-out-right-to-left");
+                    sectionTitleWorkRef.current.classList.add("animate-fade-in");
+                    sectionTitleWorkRef.current.classList.remove("animate-fade-out");
 
-                    workContentRef.current.classList.add("animate-in-right-to-left");
-                    workContentRef.current.classList.remove("animate-out-left-to-right");
+                    workContentRef.current.classList.add("animate-in-left-to-right");
+                    workContentRef.current.classList.remove("animate-out-right-to-left");
                 } else {
                     if (inFocus) {
-                        sectionTitleWorkRef.current.classList.add("animate-out-right-to-left");
-                        sectionTitleWorkRef.current.classList.remove("animate-in-left-to-right");
+                        sectionTitleWorkRef.current.classList.add("animate-fade-out");
+                        sectionTitleWorkRef.current.classList.remove("animate-fade-in");
 
 
-                        workContentRef.current.classList.add("animate-out-left-to-right");
-                        workContentRef.current.classList.remove("animate-in-right-to-left");
+                        workContentRef.current.classList.add("animate-out-right-to-left");
+                        workContentRef.current.classList.remove("animate-in-left-to-right");
                         
                         inFocus = false;
                     }
@@ -82,6 +82,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'CanIT Limited landing page.',
             bgColor: '#700000',
             url: 'https://www.canit.co.nz/',
+            stack: 'VueJS . Vuetify . AWS',
             techStack: [
                 vue,
                 vuetify,
@@ -95,6 +96,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'CanIT backend system uses CRUD to store, edit and delete hardware repair jobs, with functionalities to track the device history and automatic email and SMS message sending.',
             bgColor: '#700000',
             url: null,
+            stack: 'VueJS . Vuetify . AWS . Flutter',
             techStack: [
                 vue,
                 vuetify,
@@ -109,6 +111,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'Landing page for a local Christchurch veggie producer.',
             bgColor: '#3A9821',
             url: 'https://www.maoproduce.co.nz/',
+            stack: 'VueJS . Vuetify',
             techStack: [
                 vue,
                 vuetify
@@ -121,6 +124,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'e-commerce website for a local Christchurch grocery store, using stripe for online payment.',
             bgColor: '#F4840C',
             url: 'https://www.freshisbest.kiwi/',
+            stack: 'VueJS . Vuetify . AWS',
             techStack: [
                 vue, 
                 vuetify,
@@ -134,6 +138,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'e-commerce website for a local Christchurch vape store, using Wind Cave API for online payment.',
             bgColor: '#950CF7',
             url: 'https://wigramclouds.co.nz/',
+            stack: 'VueJS . Vuetify . AWS',
             techStack: [
                 vue, 
                 vuetify,
@@ -147,6 +152,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
             description: 'Hotel booking website for a local Christchurch motel.',
             bgColor: '#105E30',
             url: 'https://rmm.co.nz/',
+            stack: 'VueJS . Vuetify',
             techStack: [
                 vue, 
                 vuetify,
@@ -175,7 +181,8 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
                                         <p>{project.subTitle}</p>
                                     </div>
                                 <div className='work-item-footer'>
-                                    <div className="tech-stack">
+                                    <p className="stack">{project.stack}</p>
+                                    {/* <div className="tech-stack">
                                         <div className="content-fill"/>
                                         {
                                             project.techStack.map(img => {
@@ -186,7 +193,7 @@ const Work = forwardRef<HTMLDivElement>((props, ref) => {
                                                 )
                                             })
                                         }
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

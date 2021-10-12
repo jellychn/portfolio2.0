@@ -1,10 +1,9 @@
-import React, { useRef, forwardRef } from 'react';
+import { useRef, forwardRef } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/configureStore';
 import { setPromptType, setPrompt, setPromptItem } from '../redux/ducks/app';
 
-import Git from '../assets/projects/github.svg';
 import ECOMMERCE from '../assets/projects/e-commerce.svg';
 import Chess from '../assets/projects/chess.svg';
 import book from '../assets/projects/book.svg';
@@ -51,17 +50,17 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
         lastKnownScrollPosition = window.scrollY;
         if (sectionTitleProjectRef.current && projectContentRef.current) {
             if (sectionStart && prevSection) {
-                if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.5)) {
+                if (lastKnownScrollPosition >= sectionStart - (prevSection.current.clientHeight * 0.8)) {
                     inFocus = true;
-                    sectionTitleProjectRef.current.classList.add("animate-in-left-to-right");
-                    sectionTitleProjectRef.current.classList.remove("animate-out-right-to-left");
+                    sectionTitleProjectRef.current.classList.add("animate-fade-in");
+                    sectionTitleProjectRef.current.classList.remove("animate-fade-out");
 
                     projectContentRef.current.classList.add("animate-in-right-to-left");
                     projectContentRef.current.classList.remove("animate-out-left-to-right");
                 } else {
                     if (inFocus) {
-                        sectionTitleProjectRef.current.classList.add("animate-out-right-to-left");
-                        sectionTitleProjectRef.current.classList.remove("animate-in-left-to-right");
+                        sectionTitleProjectRef.current.classList.add("animate-fade-out");
+                        sectionTitleProjectRef.current.classList.remove("animate-fade-in");
 
                         projectContentRef.current.classList.add("animate-out-left-to-right");
                         projectContentRef.current.classList.remove("animate-in-right-to-left");
@@ -84,6 +83,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             demo: '',
             status: 'IN-PROGRESS',
             git: '',
+            stack: 'ReactJS',
             techStack: [
                 react
             ]
@@ -98,6 +98,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             demo: 'https://jellychn.github.io/chess/',
             status: 'COMPLETED',
             git: 'https://github.com/jellychn/chess',
+            stack: 'ReactJS',
             techStack: [
                 react
             ]
@@ -112,6 +113,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             demo: 'https://jellychn.github.io/quotes/',
             status: 'COMPLETED',
             git: 'https://github.com/jellychn/quotes',
+            stack: 'ReactJS . SCSS . Flutter . Dart',
             techStack: [
                 react,
                 sass,
@@ -129,6 +131,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             demo: 'http://keyboard-worrior.s3-website-ap-southeast-2.amazonaws.com/',
             status: 'COMPLETED',
             git: 'https://github.com/jellychn/keyboard-warrior',
+            stack: 'VueJS . AWS',
             techStack: [
                 vue,
                 aws
@@ -144,6 +147,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             demo: '',
             status: 'COMPLETED',
             git: 'https://github.com/jellychn/sylo-test',
+            stack: 'ReactJS . TypeScript',
             techStack: [
                 react,
                 typescript
@@ -169,35 +173,22 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                             <div className="project">
                                 <div className="project-LHS" style={{backgroundColor: project.LHSColor}}>
                                     <h5>{project.status}</h5>
-                                    <div className="img-container">
-                                        <img src={project.icon} alt={project.icon}/>
-                                    </div>
-                                    <div className="content-fill"/>
                                     <a href={project.git} target="_blank" rel="noreferrer">
-                                        <div className="git">
-                                            <img src={Git} alt={Git}/>
-                                        </div>
+                                        <h5 className="git">GITHUB</h5>
                                     </a>
+                                    <div className="project-logo-container">
+                                        <div className="img-container">
+                                            <img src={project.icon} alt={project.icon}/>
+                                        </div>
+                                    </div>
+                                    <p className="stack">{project.stack}</p>
                                 </div>
                                 <div className="project-RHS" style={{backgroundColor: project.RHSColor}}>
                                     <div className="project-info">
                                         <h2 className="project-name">{project.name}</h2>
                                         <p className="project-description">{project.description}</p>
-                                        
-                                        {projectButton(project.demo, project.project)}
                                         <div className="content-fill"/>
-                                        <div className="tech-stack">
-                                            <div className="content-fill"/>
-                                            {
-                                                project.techStack.map(img => {
-                                                    return (
-                                                        <div className="stack">
-                                                            <img src={img} alt={img}/>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
+                                        {projectButton(project.demo, project.project)}
                                     </div>
                                 </div>
                             </div>

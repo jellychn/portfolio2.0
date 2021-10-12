@@ -15,23 +15,11 @@ const WorkProject = () => {
     useEffect(() => {
         if (projectLogoRef.current && projectBodyRef.current && projectInfoRef.current) {        
             if (prompt) {
-                projectLogoRef.current.classList.add('animate-in-left-to-right');
-                projectLogoRef.current.classList.remove('animate-out-right-to-left');
-    
                 projectBodyRef.current.classList.add('animate-fade-in');
                 projectBodyRef.current.classList.remove('animate-fade-out');
-    
-                projectInfoRef.current.classList.add('animate-in-right-to-left');
-                projectInfoRef.current.classList.remove('animate-out-left-to-right');
-            } else {
-                projectLogoRef.current.classList.remove('animate-in-left-to-right');
-                projectLogoRef.current.classList.add('animate-out-right-to-left');
-    
+            } else {    
                 projectBodyRef.current.classList.remove('animate-fade-in');
                 projectBodyRef.current.classList.add('animate-fade-out');
-    
-                projectInfoRef.current.classList.add('animate-out-left-to-right');
-                projectInfoRef.current.classList.remove('animate-in-right-to-left');
             }
         }
     
@@ -40,8 +28,8 @@ const WorkProject = () => {
     let viewBtn = () => {
         if (project.url) {
             return (
-                <button className="view-button">
-                    <a href={project.url} target="_blank" rel="noreferrer" style={{color: project.bgColor}}>
+                <button className="view-button" style={{backgroundColor: project.navigation}}>
+                    <a href={project.url} target="_blank" rel="noreferrer" style={{color: project.bgColor, backgroundColor: project.navigation}}>
                         <h3>VIEW PROJECT</h3>
                     </a>
                 </button>
@@ -54,19 +42,11 @@ const WorkProject = () => {
             <div className="main" style={{backgroundColor: project.bgColor}}>
                 {viewBtn()}
                 <div className="content">
-                    <div ref={projectLogoRef} className="content-LHS">
-                        <div className="img-container">
-                            <img src={project.icon} alt={project.icon}/>
-                        </div>
-                    </div>
-                    <div ref={projectInfoRef} className="content-RHS">
-                        <div className="content-fill"/>
-                        <div className="info">
-                            <h1>{project.title}</h1>
-                            <h5>{project.subTitle}</h5>
-                            <br/>
-                            <p>{project.description}</p>
-                        </div>
+                    <div className="info">
+                        <h1>{project.title}</h1>
+                        <h5>{project.subTitle}</h5>
+                        <br/>
+                        <p>{project.description}</p>
                     </div>
                 </div>
             </div>

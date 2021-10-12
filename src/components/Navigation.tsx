@@ -49,7 +49,7 @@ const Navigation = () => {
     return (
         <div className="navigation">
             <div className="navigation-item-container">
-                <div ref={homeNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
+                <div ref={homeNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation}}>
                     <div className="img-container">
                         <img src={HomeImg} alt={HomeImg}/>
                     </div>
@@ -58,7 +58,7 @@ const Navigation = () => {
                 <div className="navigation-item" style={{backgroundColor: view === 'Hi, THERE 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(homeNavRef)} onMouseLeave={() => onMouseLeave(homeNavRef)} onClick={() => scrollTo(homeRef, 'HOME')}/>
             </div>
             <div className="navigation-item-container">
-                <div ref={skillsNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
+                <div ref={skillsNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation}}>
                     <div className="img-container">
                         <img src={SkillsImg} alt={SkillsImg}/>
                     </div>
@@ -67,7 +67,7 @@ const Navigation = () => {
                 <div className="navigation-item" style={{backgroundColor: view === 'SKILLS 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(skillsNavRef)} onMouseLeave={() => onMouseLeave(skillsNavRef)} onClick={() => scrollTo(skillsRef, 'SKILLS')}/>
             </div>
             <div className="navigation-item-container">
-                <div ref={workNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
+                <div ref={workNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation}}>
                     <div className="img-container">
                         <img src={WorkImg} alt={WorkImg}/>
                     </div>
@@ -76,7 +76,7 @@ const Navigation = () => {
                 <div className="navigation-item" style={{backgroundColor: view === 'WORK 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(workNavRef)} onMouseLeave={() => onMouseLeave(workNavRef)} onClick={() => scrollTo(workRef, 'WORK')}/>
             </div>
             <div className="navigation-item-container">
-                <div ref={projectNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation, boxShadow: '0 0 10px 10px ' + colorConfig.shadow}}>
+                <div ref={projectNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation}}>
                     <div className="img-container">
                         <img src={ProjectsImg} alt={ProjectsImg}/>
                     </div>
