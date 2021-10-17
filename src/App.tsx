@@ -65,7 +65,7 @@ function App() {
         <Navigation/>
         <Home ref={homeRef}/>
         <Skills ref={skillsRef}/>
-        <Work ref={workRef}/>
+        {/* <Work ref={workRef}/> */}
         <Projects ref={projectsRef}/>
       </div>
       <Footer/>

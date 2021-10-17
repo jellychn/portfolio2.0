@@ -541,85 +541,6 @@ h2 {
   }
 }
 
-// Work
-.work-container {
-  overflow: hidden;
-  min-height: 100%;
-  padding: 100px 0px;
-  width: 70%;
-  margin: auto;
-
-  .work-item-container {
-    opacity: 0;
-    margin: auto;
-    position: relative;
-    left: -200px;
-
-    .work-item-outter {
-      float: left;
-      padding: 20px;
-
-      .work-item {
-        width: 100%;
-        height: 100%;
-        background-color: #EEEEEE;
-        border-top-right-radius: 20px;
-        border-top-left-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-
-        .work-item-content {
-          border-top-right-radius: 20px;
-          border-top-left-radius: 20px;
-          flex: 1;
-
-          .content {
-            width: 200px;
-            height: 200px;
-            background-color: white;
-            position: relative;
-            border-bottom-right-radius: 5px;
-            border-top-left-radius: 20px;
-
-            .img-container {
-              position: relative;
-              top: 50%;
-              transform: translateY(-50%);
-              width: 80%;
-              margin: auto;
-  
-              img {
-                max-width: 100%;
-                max-height: 100%;
-              }
-            }
-          }
-        }
-
-        .work-item-name {
-          padding: 80px 20px 20px 20px;
-
-          h3, p {
-            text-align: right;
-            color: white;
-          }
-        }
-
-        .work-item-footer {
-          padding: 30px;
-          background-color: #fff;
-
-          .stack {
-            text-align: right;
-            color: #ccc;
-          }
-        }
-      }
-    }
-  }
-}
-
 // Projects
 .projects-container {
   overflow: hidden;
@@ -629,7 +550,7 @@ h2 {
   .project-items-container {
     opacity: 0;
     position: relative;
-    right: -200px;
+    left: -200px;
     width: 70%;
     margin: auto;
 
@@ -645,7 +566,12 @@ h2 {
         padding: 20px;
         position: relative;
 
+        h6 {
+          color: mediumaquamarine;
+        }
+
         .git {
+          margin-top: 5px;
           color: mediumaquamarine;
           cursor: pointer;
           transition: 100ms ease-in;
@@ -664,11 +590,10 @@ h2 {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          padding: 40px 0;
 
           .img-container {
-            width: 150px;
-            height: 150px;
-            background-color: aquamarine;
+            background-color: transparent;
             margin: auto;
     
               img {
@@ -688,7 +613,7 @@ h2 {
         display: flex;
         flex-direction: column;
         padding: 40px;
-        height: 100%;
+        min-height: 500px;
 
         .project-name {
           margin-bottom: 40px;
@@ -910,10 +835,6 @@ h2 {
     width: 90%;
   }
 
-  .work-project {
-    width: 90%;
-  }
-
   .contact-card {
     width: 90%;
 
@@ -958,7 +879,7 @@ h2 {
 
   .skills-container {
     .skills-content {
-      width: 90%;
+      width: 70%;
       
       .skills-item {
         width: 100px;
@@ -966,32 +887,28 @@ h2 {
       }
     }
   }
-
-  .work-container {
-    .work-item-container {
-      width: 90%;
-
-      .work-item-outter {
-        width: 100%;
-      }
-    }
-  }
   
   .projects-container {
     .project {
       display: block;
-      height: auto;
 
       .project-LHS {
+        height: 100%;
         width: 100%;
-        height: 300px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+  
+        .project-logo-container {
+          .img-container {
+            width: 100px;
+            height: 100px;
+          }
+        }
       }
   
       .project-RHS {
         width: 100%;
-        height: 500px;
+        min-height: 500px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
       }
@@ -1005,10 +922,6 @@ h2 {
   }
 
   .cv {
-    width: 750px;
-  }
-
-  .work-project {
     width: 750px;
   }
 
@@ -1064,31 +977,26 @@ h2 {
     }
   }
 
-  .work-container {
-    .work-item-container {
-      width: 70%;
-
-      .work-item-outter {
-        width: 50%;
-      }
-    }
-  }
-
   .projects-container {
     .project {
       display: flex;
-      height: 500px;
+      min-height: 500px;
 
       .project-LHS {
         width: 50%;
-        height: 100%;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+
+        .project-logo-container {
+          .img-container {
+            width: 150px;
+            height: 150px;
+          }
+        }
       }
   
       .project-RHS {
         width: 50%;
-        height: 100%;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
       }
