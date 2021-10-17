@@ -104,22 +104,20 @@
 .contact-card {
   z-index: 2;
   border: 3px solid white;
-  height: 600px;
   background-color: white;
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
 
   .contact-card-LHS {
+    padding: 40px;
     background-color: #FFCC67;
     flex: 5;
     display: flex;
     flex-direction: column;
 
     .avatar {
-      width: 80%;
       margin: auto;
 
       img {
@@ -129,7 +127,7 @@
     }
   }
   .contact-card-RHS {
-    padding: 40px;
+    padding: 20px;
     background-color: white;
     flex: 6;
     display: flex;
@@ -137,12 +135,14 @@
 
     .contact-header {
       h4 {
+        font-size: 12px;
         text-align: right;
         color: #FFCC67;
       }
     }
 
     .contact-main {
+      padding: 40px 20px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -162,8 +162,8 @@
       display: flex;
 
       .img-container {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
         margin: 0 15px;
         display: flex;
@@ -836,16 +836,24 @@ h2 {
   }
 
   .contact-card {
-    width: 90%;
+    height: auto;
+    display: block;
+    width: 80%;
+
+    .contact-card-LHS {  
+      .avatar {
+        width: 30%;
+      }
+    }
 
     .contact-card-RHS {
       .contact-main {
         h1 {
-          font-size: 35px;
+          font-size: 20px;
         }
   
         h2 {
-          font-size: 25px;
+          font-size: 15px;
         }
       }
     }
@@ -926,16 +934,25 @@ h2 {
   }
 
   .contact-card {
+    height: 600px;
+    display: flex;
     width: 800px;
 
+    .contact-card-LHS {  
+      .avatar {
+        width: 50%;
+      }
+    }
+
     .contact-card-RHS {
+      height: 100%;
       .contact-main {
         h1 {
-          font-size: 50px;
+          font-size: 30px;
         }
   
         h2 {
-          font-size: 30px;
+          font-size: 20px;
         }
       }
     }
