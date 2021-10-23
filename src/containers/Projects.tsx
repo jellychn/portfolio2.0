@@ -281,7 +281,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
 
     const projectButton = (href:string, project:string) => {
         if (href.length > 0) {
-            return <button className="project-button"> <a href={href} target="_blank" rel="noreferrer"><h3>VIEW PROJECT</h3></a></button>
+            return <a href={href} target="_blank" rel="noreferrer"> <button className="project-button"><h3>VIEW PROJECT</h3></button></a>
         } else if (project.length > 0) {
             return <button onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('projectShowCase')); dispatch(setPromptItem(project))}} className="project-button"> <h3>VIEW PROJECT</h3></button>
         }
