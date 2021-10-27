@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio2.0/static/css/main.36940be5.chunk.css",
-    "main.js": "/portfolio2.0/static/js/main.743c3e14.chunk.js",
-    "main.js.map": "/portfolio2.0/static/js/main.743c3e14.chunk.js.map",
+    "main.js": "/portfolio2.0/static/js/main.ce90e589.chunk.js",
+    "main.js.map": "/portfolio2.0/static/js/main.ce90e589.chunk.js.map",
     "runtime-main.js": "/portfolio2.0/static/js/runtime-main.2f815aa0.js",
     "runtime-main.js.map": "/portfolio2.0/static/js/runtime-main.2f815aa0.js.map",
     "static/js/2.83aa4be0.chunk.js": "/portfolio2.0/static/js/2.83aa4be0.chunk.js",
@@ -50,7 +50,7 @@
     "static/media/python.e6d7dc73.svg": "/portfolio2.0/static/media/python.e6d7dc73.svg",
     "static/media/react.e68b35f4.svg": "/portfolio2.0/static/media/react.e68b35f4.svg",
     "static/media/redux.0e4fb1c8.svg": "/portfolio2.0/static/media/redux.0e4fb1c8.svg",
-    "static/media/resume.cb3a9a60.pdf": "/portfolio2.0/static/media/resume.cb3a9a60.pdf",
+    "static/media/resume.4943022f.pdf": "/portfolio2.0/static/media/resume.4943022f.pdf",
     "static/media/right.1918b9b1.svg": "/portfolio2.0/static/media/right.1918b9b1.svg",
     "static/media/sass.8aa78a83.svg": "/portfolio2.0/static/media/sass.8aa78a83.svg",
     "static/media/skills.4a1f0de2.svg": "/portfolio2.0/static/media/skills.4a1f0de2.svg",
@@ -68,6 +68,6 @@
     "static/js/runtime-main.2f815aa0.js",
     "static/js/2.83aa4be0.chunk.js",
     "static/css/main.36940be5.chunk.css",
-    "static/js/main.743c3e14.chunk.js"
+    "static/js/main.ce90e589.chunk.js"
   ]
 }
