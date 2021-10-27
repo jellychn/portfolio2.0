@@ -5,7 +5,6 @@ import { RootState } from '../redux/configureStore';
 
 import HomeImg from '../assets/home.svg';
 import SkillsImg from '../assets/skills.svg';
-import WorkImg from '../assets/work.svg';
 import ProjectsImg from '../assets/projects.svg';
 
 const Navigation = () => {
@@ -14,12 +13,10 @@ const Navigation = () => {
 
     const homeRef = useSelector((state: RootState) => state.app.homeRef);
     const skillsRef = useSelector((state: RootState) => state.app.skillsRef);
-    const workRef = useSelector((state: RootState) => state.app.workRef);
     const projectRef = useSelector((state: RootState) => state.app.projectRef);
 
     const homeNavRef = useRef<HTMLDivElement>(null);
     const skillsNavRef = useRef<HTMLDivElement>(null);
-    const workNavRef = useRef<HTMLDivElement>(null);
     const projectNavRef = useRef<HTMLDivElement>(null);
 
     const onMouseOver = (ref: RefObject<HTMLDivElement>) => {
@@ -55,7 +52,7 @@ const Navigation = () => {
                     </div>
                     <h5>HOME</h5>
                 </div>
-                <div className="navigation-item" style={{backgroundColor: view === 'Hi, THERE 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(homeNavRef)} onMouseLeave={() => onMouseLeave(homeNavRef)} onClick={() => scrollTo(homeRef, 'HOME')}/>
+                <div className="navigation-item" style={{backgroundColor: view === 'HI, THERE 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(homeNavRef)} onMouseLeave={() => onMouseLeave(homeNavRef)} onClick={() => scrollTo(homeRef, 'HOME')}/>
             </div>
             <div className="navigation-item-container">
                 <div ref={skillsNavRef} className="nav-info" style={{backgroundColor: colorConfig.navigation}}>
@@ -65,15 +62,6 @@ const Navigation = () => {
                     <h5>SKILLS</h5>
                 </div>
                 <div className="navigation-item" style={{backgroundColor: view === 'SKILLS 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(skillsNavRef)} onMouseLeave={() => onMouseLeave(skillsNavRef)} onClick={() => scrollTo(skillsRef, 'SKILLS')}/>
-            </div>
-            <div className="navigation-item-container">
-                <div ref={workNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation}}>
-                    <div className="img-container">
-                        <img src={WorkImg} alt={WorkImg}/>
-                    </div>
-                    <h5>WORK</h5>
-                </div>
-                <div className="navigation-item" style={{backgroundColor: view === 'WORK 。' ? colorConfig.navigation:colorConfig.teriary}} onMouseEnter={() => onMouseOver(workNavRef)} onMouseLeave={() => onMouseLeave(workNavRef)} onClick={() => scrollTo(workRef, 'WORK')}/>
             </div>
             <div className="navigation-item-container">
                 <div ref={projectNavRef} className="nav-info"style={{backgroundColor: colorConfig.navigation}}>

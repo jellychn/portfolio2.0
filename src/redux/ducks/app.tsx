@@ -8,7 +8,6 @@ const SET_PROMPT_TYPE = 'portfolio2.0/app/setPromptType';
 
 const SET_HOME_POSITIONS = 'portfolio2.0/app/setHomePositions';
 const SET_SKILLS_POSITIONS = 'portfolio2.0/app/setSkillsPositions';
-const SET_WORK_POSITIONS = 'portfolio2.0/app/setWorkPositions';
 const SET_PROJECT_POSITIONS = 'portfolio2.0/app/setProjectPositions';
 
 
@@ -30,8 +29,7 @@ const initialState = {
         navigation: '#FFCC67'
     },
 
-    view: 'HI, THERE',
-
+    view: 'HI, THERE 。',
     homeRef: null,
     homeStartPosition: null,
     homeEndPosition: null,
@@ -40,9 +38,6 @@ const initialState = {
     skillsRef: null,
     skillsStartPosition: null,
     skillsEndPosition: null,
-    workRef: null,
-    workStartPosition: null,
-    workEndPosition: null,
     projectRef: null,
     projectStartPosition: null,
 };
@@ -103,13 +98,6 @@ const resolver = (state = initialState, action: { type: any; payload: any; }) =>
                 skillsStartPosition: action.payload.startPosition,
                 skillsEndPosition: action.payload.endPosition
             }
-        case SET_WORK_POSITIONS:
-            return {
-                ...state,
-                workRef: action.payload.ref,
-                workStartPosition: action.payload.startPosition,
-                workEndPosition: action.payload.endPosition
-            }
         case SET_PROJECT_POSITIONS:
             return {
                 ...state,
@@ -160,11 +148,6 @@ export const setHomePositions = (payload: object) => ({
 
 export const setSkillsPositions = (payload: object) => ({
     type: SET_SKILLS_POSITIONS,
-    payload: payload
-});
-
-export const setWorkPositions = (payload: object) => ({
-    type: SET_WORK_POSITIONS,
     payload: payload
 });
 
