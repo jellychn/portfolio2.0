@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/configureStore';
 import { setPrompt, setPromptType, setFooterText, setDarkMode } from '../redux/ducks/app';
 
-import Linkedin from '../assets/linkedin.svg';
+// import Linkedin from '../assets/linkedin.svg';
 import GitHub from '../assets/github.svg';
 import Contact from '../assets/contact.svg';
 import CV from '../assets/cv.svg';
