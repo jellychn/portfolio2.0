@@ -41,7 +41,7 @@ const ContactCard = () => {
                 <div className="contact-footer">
                     <div className="content-fill"/>
                     <div className="img-container">
-                        <a href="mailto: jchen123.862@gmail.com">
+                        <a href="mailto:jchen123.862@gmail.com">
                             <img src={Contact} alt={Contact}/>
                         </a>
                     </div>

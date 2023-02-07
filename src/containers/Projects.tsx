@@ -7,7 +7,6 @@ import { setPromptType, setPrompt, setPromptItem } from '../redux/ducks/app';
 import hardware from '../assets/work/hardware.svg';
 import system from '../assets/work/system.svg';
 import plant from '../assets/work/plant.svg';
-import veggie from '../assets/work/veggie.svg';
 import vape from '../assets/work/vape.svg';
 import hotel from '../assets/work/hotel.svg';
 
@@ -15,11 +14,10 @@ import ecommerce from '../assets/projects/e-commerce.svg';
 import language from '../assets/projects/language.svg';
 import chess from '../assets/projects/chess.svg';
 import book from '../assets/projects/book.svg';
-import keyboard from '../assets/projects/keyboard.svg';
 import Crypto from '../assets/projects/cryptocurrency.svg';
 
 // backend
-import aws from '../assets/skills/skill-set/aws.svg';
+// import aws from '../assets/skills/skill-set/aws.svg';
 // import graphql from '../assets/skills/skill-set/graphql.svg';
 // import node from '../assets/skills/skill-set/node.svg';
 
@@ -40,7 +38,7 @@ import react from '../assets/skills/skill-set/react.svg';
 // import redux from '../assets/skills/skill-set/redux.svg';
 import sass from '../assets/skills/skill-set/sass.svg';
 import typescript from '../assets/skills/skill-set/typescript.svg';
-import vue from '../assets/skills/skill-set/vue.svg';
+// import vue from '../assets/skills/skill-set/vue.svg';
 // import vuetify from '../assets/skills/skill-set/vuetify.svg';
 
 
@@ -125,22 +123,6 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             subTitle: 'LANDING PAGE',
             git: '',
             stack: 'VueJS . Vuetify',
-            techStack: [
-                react
-            ]
-        },
-        {
-            project: '',
-            icon: veggie,
-            name: 'FRESH IS BEST',
-            description: "Fresh Is Best is a local produce distribution and grocery store. The scope of this project was to build a functioning e-commerce web app linked to a payment gateway. In this project I handled adding, updating and deletion of the products to the cart as well as the processing of the payment gateway. Strip was used for online payment for this project.",
-            LHSColor: 'aquamarine',
-            RHSColor: 'white',
-            demo: 'https://www.freshisbest.kiwi/',
-            title: 'CanIT Limited.',
-            subTitle: 'E-COMMERCE',
-            git: '',
-            stack: 'VueJS . Vuetify . AWS',
             techStack: [
                 react
             ]
@@ -241,23 +223,6 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                 sass,
                 flutter,
                 dart,
-            ]
-        },
-        {
-            project: '',
-            icon: keyboard,
-            name: 'KEYBOARD',
-            description: "A keyboard game I programmed to help improve typing speed. It randomly generates random strings for the user to correctly type. Hosted on AWS.",
-            LHSColor: 'aquamarine',
-            RHSColor: 'white',
-            demo: 'http://keyboard-worrior.s3-website-ap-southeast-2.amazonaws.com/',
-            title: 'PERSONAL PROJECT',
-            subTitle: 'COMPLETED',
-            git: 'https://github.com/jellychn/keyboard-warrior',
-            stack: 'VueJS . AWS',
-            techStack: [
-                vue,
-                aws
             ]
         },
         {
