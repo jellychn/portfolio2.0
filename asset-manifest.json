@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio2.0/static/css/main.198235b2.chunk.css",
-    "main.js": "/portfolio2.0/static/js/main.b0a2cff0.chunk.js",
-    "main.js.map": "/portfolio2.0/static/js/main.b0a2cff0.chunk.js.map",
+    "main.js": "/portfolio2.0/static/js/main.6b304970.chunk.js",
+    "main.js.map": "/portfolio2.0/static/js/main.6b304970.chunk.js.map",
     "runtime-main.js": "/portfolio2.0/static/js/runtime-main.2f815aa0.js",
     "runtime-main.js.map": "/portfolio2.0/static/js/runtime-main.2f815aa0.js.map",
     "static/js/2.83aa4be0.chunk.js": "/portfolio2.0/static/js/2.83aa4be0.chunk.js",
@@ -19,7 +19,6 @@
     "static/media/cloud.03b17b39.svg": "/portfolio2.0/static/media/cloud.03b17b39.svg",
     "static/media/contact.fde0414d.svg": "/portfolio2.0/static/media/contact.fde0414d.svg",
     "static/media/cryptocurrency.27bee9ed.svg": "/portfolio2.0/static/media/cryptocurrency.27bee9ed.svg",
-    "static/media/cv.e665d91e.svg": "/portfolio2.0/static/media/cv.e665d91e.svg",
     "static/media/dark-display.a435ea35.png": "/portfolio2.0/static/media/dark-display.a435ea35.png",
     "static/media/dark-view.b9d54a66.png": "/portfolio2.0/static/media/dark-view.b9d54a66.png",
     "static/media/dart.e6ce834f.svg": "/portfolio2.0/static/media/dart.e6ce834f.svg",
@@ -33,6 +32,7 @@
     "static/media/hotel.f158b1c5.svg": "/portfolio2.0/static/media/hotel.f158b1c5.svg",
     "static/media/java.4d03e066.svg": "/portfolio2.0/static/media/java.4d03e066.svg",
     "static/media/javascript.00f3e5cf.svg": "/portfolio2.0/static/media/javascript.00f3e5cf.svg",
+    "static/media/law.a4165b10.png": "/portfolio2.0/static/media/law.a4165b10.png",
     "static/media/left.20a5f757.svg": "/portfolio2.0/static/media/left.20a5f757.svg",
     "static/media/light-display.e7877f38.png": "/portfolio2.0/static/media/light-display.e7877f38.png",
     "static/media/light-view.38192faf.png": "/portfolio2.0/static/media/light-view.38192faf.png",
@@ -43,7 +43,6 @@
     "static/media/node.615ffbea.svg": "/portfolio2.0/static/media/node.615ffbea.svg",
     "static/media/phone.34faee4b.svg": "/portfolio2.0/static/media/phone.34faee4b.svg",
     "static/media/photoshop.20d9ef58.svg": "/portfolio2.0/static/media/photoshop.20d9ef58.svg",
-    "static/media/plant.de606886.svg": "/portfolio2.0/static/media/plant.de606886.svg",
     "static/media/projects.188150a1.svg": "/portfolio2.0/static/media/projects.188150a1.svg",
     "static/media/python.e6d7dc73.svg": "/portfolio2.0/static/media/python.e6d7dc73.svg",
     "static/media/react.e68b35f4.svg": "/portfolio2.0/static/media/react.e68b35f4.svg",
@@ -55,6 +54,7 @@
     "static/media/star.5cf67a03.svg": "/portfolio2.0/static/media/star.5cf67a03.svg",
     "static/media/sun-light.6d3bd4fc.svg": "/portfolio2.0/static/media/sun-light.6d3bd4fc.svg",
     "static/media/sun.6d3bd4fc.svg": "/portfolio2.0/static/media/sun.6d3bd4fc.svg",
+    "static/media/tricor.476c147e.png": "/portfolio2.0/static/media/tricor.476c147e.png",
     "static/media/typescript.a6305a73.svg": "/portfolio2.0/static/media/typescript.a6305a73.svg",
     "static/media/vue.4921ee76.svg": "/portfolio2.0/static/media/vue.4921ee76.svg",
     "static/media/vuetify.c3ac4b61.svg": "/portfolio2.0/static/media/vuetify.c3ac4b61.svg"
@@ -63,6 +63,6 @@
     "static/js/runtime-main.2f815aa0.js",
     "static/js/2.83aa4be0.chunk.js",
     "static/css/main.198235b2.chunk.css",
-    "static/js/main.b0a2cff0.chunk.js"
+    "static/js/main.6b304970.chunk.js"
   ]
 }
