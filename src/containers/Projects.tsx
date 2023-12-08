@@ -8,6 +8,8 @@ import hardware from '../assets/work/hardware.svg';
 import plant from '../assets/work/plant.svg';
 import hotel from '../assets/work/hotel.svg';
 
+import tricor from '../assets/projects/tricor.png';
+import law from '../assets/projects/law.png';
 import ecommerce from '../assets/projects/e-commerce.svg';
 import chess from '../assets/projects/chess.svg';
 import book from '../assets/projects/book.svg';
@@ -78,17 +80,51 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     const projects = [
         {
             project: '',
+            icon: tricor,
+            name: 'Tricor',
+            description: 'Software engineer at Dave Clark. Working on the Tricor project.',
+            LHSColor: 'aquamarine',
+            RHSColor: 'white',
+            demo: 'https://www.tricorglobal.com/',
+            title: 'CAREER',
+            subTitle: 'PRESENT',
+            git: '',
+            stack: 'ReactJS . ExpressJS . Azure',
+            date: '2023',
+            techStack: [
+                react
+            ]
+        },
+        {
+            project: '',
+            icon: law,
+            name: 'LawVu',
+            description: 'Software engineer at LawVu working on a SASS application.',
+            LHSColor: 'aquamarine',
+            RHSColor: 'white',
+            demo: 'https://lawvu.com/',
+            title: 'CAREER',
+            subTitle: 'COMPLETED',
+            git: '',
+            stack: 'Angular . .NET . Azure',
+            date: '2022',
+            techStack: [
+                react
+            ]
+        },
+        {
+            project: '',
             icon: ecommerce,
             name: 'E-COMMERCE',
-            description: 'Currently as a side project I am building an e-commerce website using React and aws services such as: DynamoBD, Route 53, Amplify, Cognito, API Gateway and Lambda.',
+            description: 'DynamoBD, Route 53, Amplify, Cognito, API Gateway and Lambda.',
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: 'https://www.yoominii.com/',
             title: 'PERSONAL PROJECT',
-            subTitle: 'IN-PROGRESS',
+            subTitle: 'COMPLETED',
             git: '',
             stack: 'ReactJS . AWS',
-            date: 'PRESENT',
+            date: '2022',
             techStack: [
                 react
             ]
@@ -103,23 +139,6 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             demo: 'https://www.canit.co.nz/',
             title: 'CanIT Limited.',
             subTitle: 'INFORMATION',
-            git: '',
-            stack: 'VueJS . Vuetify',
-            date: '2019',
-            techStack: [
-                react
-            ]
-        },
-        {
-            project: '',
-            icon: plant,
-            name: 'MAO PRODUCE',
-            description: "During this project I was tasked to design and implement a landing page for a local veggie farm. The technologies used were VueJS and Vuetify.",
-            LHSColor: 'aquamarine',
-            RHSColor: 'white',
-            demo: 'https://www.maoproduce.co.nz/',
-            title: 'CanIT Limited.',
-            subTitle: 'LANDING PAGE',
             git: '',
             stack: 'VueJS . Vuetify',
             date: '2019',

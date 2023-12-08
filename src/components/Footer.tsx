@@ -56,9 +56,9 @@ const Footer = () => {
                         <div className="content-item" onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('contact'))}} onMouseEnter={() => {dispatch(setFooterText('CONTACT'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
                             <img className="icon" src={Contact} alt={Contact}/>
                         </div>
-                        <div className="content-item" onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('cv'))}} onMouseEnter={() => {dispatch(setFooterText('CV'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
+                        {/* <div className="content-item" onClick={() => {dispatch(setPrompt(true)); dispatch(setPromptType('cv'))}} onMouseEnter={() => {dispatch(setFooterText('CV'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
                             <img className="icon" src={CV} alt={CV}/>
-                        </div>
+                        </div> */}
                         <div className="content-item" onClick={() => dispatch(setDarkMode(!darkMode))} onMouseEnter={() => {dispatch(setFooterText('CLICK ME!'));onMouseOver()}} onMouseOut={() => {dispatch(setFooterText(''));onMouseLeave()}}>
                             <img className="icon" src={darkMode ? Sun:Moon} alt={darkMode ? Sun:Moon}/>
                         </div>
