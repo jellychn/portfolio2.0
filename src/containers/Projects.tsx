@@ -5,7 +5,6 @@ import { RootState } from '../redux/configureStore';
 import { setPromptType, setPrompt, setPromptItem } from '../redux/ducks/app';
 
 import hardware from '../assets/work/hardware.svg';
-import plant from '../assets/work/plant.svg';
 import hotel from '../assets/work/hotel.svg';
 
 import tricor from '../assets/projects/tricor.png';
@@ -81,7 +80,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
         {
             project: '',
             icon: tricor,
-            name: 'Tricor',
+            name: 'Dave Clark',
             description: 'Software engineer at Dave Clark. Working on the Tricor project.',
             LHSColor: 'aquamarine',
             RHSColor: 'white',
@@ -99,7 +98,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             project: '',
             icon: law,
             name: 'LawVu',
-            description: 'Software engineer at LawVu working on a SASS application.',
+            description: 'Software engineer at LawVu working on SASS application.',
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: 'https://lawvu.com/',
@@ -133,7 +132,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             project: '',
             icon: hardware,
             name: 'CANIT LIMITED',
-            description: "This project included designing and building a landing page for CanIT Limited, the website was built using VueJS.",
+            description: "Software engineer at CanIT Limited, Working on multiple client software solutions.",
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: 'https://www.canit.co.nz/',
@@ -150,7 +149,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             project: '',
             icon: hotel,
             name: 'RICCARTON MALL MOTELS',
-            description: "I was the lead designer and front-end developer for this project. The technology stack used was Vue and Vuetify. During this project I had to link the web app to the booking system as well as implementing emailing and Google reCaptcha for security.",
+            description: "Lead designer and developer for this project.",
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: 'https://rmm.co.nz/',
@@ -167,7 +166,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             project: '',
             icon: chess,
             name: 'CHESS',
-            description: "During one afternoon decided to built a working chess game using ReactJS.",
+            description: "ReactJS chess game.",
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: 'https://jellychn.github.io/chess/',
@@ -184,7 +183,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             project: '',
             icon: book,
             name: 'QUOTES',
-            description: 'Web app and companion app that displays quotes from the book 366 days with Wisdom by Master Hsing Yun, the web app cycles between 366 quotes changing everyday automatically based on the date and the quote according to the book. ReactJS was used for the web app and flutter for the app.',
+            description: 'Inspired by the book 366 days with Wisdom by Master Hsing Yun, created a web app that cycles between 366 quotes changing everyday based on the date and the quote according to the book.',
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: 'https://jellychn.github.io/quotes/',
@@ -204,7 +203,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             project: 'sylo',
             icon: Crypto,
             name: 'SYLO TEST',
-            description: "Front-end Cryptocurrency app tracker I made when applying for an internship back in 2019 using React Native. I was tasked to replicate a design produced by the company's UX developers. Requesting data from a backend API and enabling light and dark themes.",
+            description: "Front-end Cryptocurrency app tracker for an internship back in 2019 using React Native. I was tasked to replicate a design produced by the company's UX developers. Requesting data from a backend API and enabling light and dark themes.",
             LHSColor: 'aquamarine',
             RHSColor: 'white',
             demo: '',

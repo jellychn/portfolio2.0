@@ -5,7 +5,6 @@ import { setPrompt } from '../redux/ducks/app';
 
 import ContactCard from './ContactCard';
 import ProjectShowcase from './ProjectShowcase';
-import CV from './CV';
 
 const Prompt = () => {
     const dispatch = useDispatch();
@@ -27,8 +26,6 @@ const Prompt = () => {
     let promptContent = () => {
         if (promptType === 'contact') {
             return <ContactCard/>;
-        } else if (promptType === 'cv') {
-            return <CV/>;
         } else if (promptType === 'projectShowCase') {
             return <ProjectShowcase/>;
         }

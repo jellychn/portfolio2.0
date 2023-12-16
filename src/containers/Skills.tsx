@@ -8,6 +8,7 @@ import { RootState } from '../redux/configureStore';
 import aws from '../assets/skills/skill-set/aws.svg';
 import graphql from '../assets/skills/skill-set/graphql.svg';
 import node from '../assets/skills/skill-set/node.svg';
+import azure from '../assets/skills/skill-set/azure.svg';
 
 // design
 import figma from '../assets/skills/skill-set/figma.svg';
@@ -28,6 +29,9 @@ import sass from '../assets/skills/skill-set/sass.svg';
 import typescript from '../assets/skills/skill-set/typescript.svg';
 import vue from '../assets/skills/skill-set/vue.svg';
 import vuetify from '../assets/skills/skill-set/vuetify.svg';
+import angular from '../assets/skills/skill-set/angular.svg';
+import tailwind from '../assets/skills/skill-set/tailwind.svg';
+import storybook from '../assets/skills/skill-set/storybook.svg';
 
 interface SkillsProps {
 }
@@ -60,8 +64,20 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
             name: 'Flutter'
         },
         {
+            logo: angular,
+            name: 'Angular'
+        },
+        {
             logo: sass,
             name: 'SASS'
+        },
+        {
+            logo: tailwind,
+            name: 'Tailwind'
+        },
+        {
+            logo: storybook,
+            name: 'Storybook'
         },
         {
             logo: figma,
@@ -70,7 +86,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
         {
             logo: photoshop,
             name: 'PhotoShop'
-        },
+        }
     ];
 
     const techBackend = [
@@ -86,6 +102,10 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
             logo: node,
             name: 'NodeJS'
         },
+        {
+            logo: azure,
+            name: 'MS Azure'
+        }
     ];
 
     const techLang = [
